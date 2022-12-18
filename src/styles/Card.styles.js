@@ -28,6 +28,7 @@ const Column = styled.div`
 const CardImage = styled.img`
   width: 75%;
   max-width: 240px;
+
 `;
 
 const Detail = styled.p`

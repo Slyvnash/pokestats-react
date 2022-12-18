@@ -41,7 +41,7 @@ const useStore = create((set, get) => ({
         const tempArr = [];
         state.list.map((item) => {
           const tempGenSplit = item.generation.url.split("/");
-          const containsName = item.name.includes(state.filters[tabId].search);
+          const containsName = item.name.includes(state.filters[tabId].search.toLowerCase());
           const containsType =
             item.types.length > 1 &&
             item.types[1].type.name === state.filters[tabId].type
