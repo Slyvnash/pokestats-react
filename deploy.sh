@@ -16,15 +16,9 @@ echo > .nojekyll
 # if you are deploying to a custom domain
 echo 'pokestats.info' > CNAME
 
-echo "build done"
-echo "git stuff"
-echo "git init"
 git init
-echo "git checkout"
 git checkout -B master
-echo "git add all files"
 git add -A
-echo "git commit files"
 git commit -m 'deploy'
 
 echo "git push to repo"
