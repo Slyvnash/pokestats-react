@@ -7,7 +7,7 @@ import Loader from "./Loader";
 export default function Main() {
   const isLoading = useStore((state) => state.isLoading);
 
-  if (isLoading || !isLoading)
+  if (isLoading)
     return (
       <>
         <MainContainer>
