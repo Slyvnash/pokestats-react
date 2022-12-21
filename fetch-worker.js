@@ -29,7 +29,9 @@ onmessage = event => {
   chunks.reduce(
     (last, current, index) =>
       last.then(() =>
-        batchFetch(current).then(data => {
+        batchFetch(current).then(data =>
+        {
+          
           postMessage({
             chunkId: index,
             chunkData: data,
