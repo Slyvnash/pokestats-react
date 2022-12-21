@@ -103,7 +103,6 @@ const InnerStatBar = styled.div`
   width: ${(props) => props.width}%;
   background-color: ${({ theme }) => theme.colors.highlight};
   opacity: 50%;
-  border-radius: 4px 0 0 4px;
 `;
 const StatOverlay = styled.div`
   position: absolute;
