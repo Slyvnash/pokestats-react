@@ -13,8 +13,10 @@ const CardContainer = styled.div`
   font-weight: 900;
   padding: 8px 0;
 
-  @media only screen and (min-width: 640px) {
-    flex-direction: column; 
+  @media only screen and (min-width: 640px) and (orientation: landscape) {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; 
   }
 `;
 
@@ -23,12 +25,19 @@ const Column = styled.div`
   flex-direction: column;
   align-items: center;
   width: 50%;
+
+  @media only screen and (min-width: 640px) and (orientation: landscape) {
+    width: 75%
+  }
 `;
 
 const CardImage = styled.img`
   width: 75%;
-  max-width: 240px;
+  max-width: 200px;
 
+  @media only screen and (min-width: 640px) and (orientation: landscape) {
+    width: 100%;
+  }
 `;
 
 const Detail = styled.p`
@@ -83,6 +92,10 @@ const OuterStatBar = styled.div`
   width: 100%;
   border: 2px solid ${({ theme }) => theme.colors.main};
   border-radius: 4px;
+
+  @media only screen and (min-width: 640px) and (orientation: landscape) {
+    height: 32px;
+  }
 `;
 
 const InnerStatBar = styled.div`
@@ -97,6 +110,10 @@ const StatOverlay = styled.div`
   top: 2px;
   left: 4px;
   width: 100%;
+
+  @media only screen and (min-width: 640px) and (orientation: landscape) {
+    top: 4px;
+  }
 `;
 
 const StatText = styled.p`
@@ -108,6 +125,10 @@ const StatText = styled.p`
   font-weight: 700;
   letter-spacing: 1px;
   margin: 0;
+
+  @media only screen and (min-width: 640px) and (orientation: landscape) {
+    font-size: 0.9rem;
+  }
 `;
 
 export {

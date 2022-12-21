@@ -1,17 +1,19 @@
-import { MainContainer, HRule } from "../styles/Main.styles";
+import { MainContainer, DisplayContainer, HRule } from "../styles/Main.styles";
 import Menu from "./Menu";
 import Card from "./Card";
 import { useStore } from "../store/store";
+import Loader from "./Loader";
 
 export default function Main() {
   const isLoading = useStore((state) => state.isLoading);
 
-  if (isLoading)
+  if (isLoading || !isLoading)
     return (
       <>
         <MainContainer>
-        <Menu />
-          Loading...
+          <DisplayContainer>
+          <Loader />
+          </DisplayContainer>
         </MainContainer>
       </>
     );
@@ -19,10 +21,12 @@ export default function Main() {
   return (
     <>
       <MainContainer>
-      <Menu />
-        <Card id={1} />
-        <HRule />
-        <Card id={2} />
+        <Menu />
+        <DisplayContainer>
+          <Card id={1} />
+          <HRule />
+          <Card id={2} />
+        </DisplayContainer>
       </MainContainer>
     </>
   );

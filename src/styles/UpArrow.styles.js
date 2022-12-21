@@ -7,6 +7,10 @@ const UpArrowSVG = styled.svg`
     stroke-width: 2;
     height: 100%;
     width: 18px;
+
+    @media only screen and (min-width: 640px) and (orientation: landscape) {
+        right: 8px;
+      }
 `
 
 export {UpArrowSVG}

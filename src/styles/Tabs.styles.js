@@ -5,6 +5,10 @@ const TabsContainer = styled.div`
     background-color: ${({ theme }) => theme.colors.accent};
     border-radius: 8px 0 0 8px;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+
+    @media only screen and (min-width: 1280px) {
+        border-radius: 8px;
+    }
 `
 
 const TabList = styled.ul`
@@ -17,6 +21,13 @@ const TabList = styled.ul`
 
     & li:first-child {
         border-top-left-radius: 8px;
+    }
+
+    @media only screen and (min-width: 1280px) {
+
+        & li:last-child {
+            border-top-right-radius: 8px;
+        }
     }
 `
 

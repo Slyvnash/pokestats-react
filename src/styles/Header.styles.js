@@ -4,8 +4,13 @@ const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
   width: 90%;
+  max-width: 767px;
   margin: 0 auto;
   height: 48px;
+
+  @media only screen and (min-width: 1280px) {
+    justify-content: center;
+  }
 `;
 
 const Text = styled.h1`

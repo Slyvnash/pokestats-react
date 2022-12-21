@@ -6,6 +6,8 @@ const useStore = create((set, get) => ({
     set(() => ({
       isLoading: value,
     })),
+  numberLoaded: 0,
+  setNumberLoaded: (val) => set((state) => ({numberLoaded: state.numberLoaded + val})),
   list: [],
   setList: (list) =>
     set(() => ({

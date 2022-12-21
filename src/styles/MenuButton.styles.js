@@ -7,6 +7,10 @@ const MenuButtonSVG = styled.svg`
   &:hover {
     stroke: ${({ theme }) => theme.colors.accent};
   }
+
+  @media only screen and (min-width: 1280px) {
+    visibility: hidden;
+  }
 `;
 
 export {MenuButtonSVG}

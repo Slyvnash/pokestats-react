@@ -12,10 +12,12 @@ workerFetchAll.postMessage({ start: true });
 function App() {
   const setIsLoading = useStore((state) => state.setIsLoading)
   const setList = useStore((state) => state.setList);
+  const setNumberLoaded = useStore((state) => state.setNumberLoaded)
   const allData = [];
 
   workerFetchAll.onmessage = (event) => {
     allData.push(event.data.chunkData);
+    setNumberLoaded(event.data.chunkData.length)
     if (event.data.chunkId === event.data.total) {
       const combinedData = [];
       allData.flat().forEach((call) => {
