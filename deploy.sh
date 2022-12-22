@@ -23,6 +23,6 @@ git commit -m 'deploy'
 
 echo "git push to repo"
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:slyvnash/pokestats-react.git master:gh-pages
+git push -f git@github.com:cavisdev/pokestats-react.git master:gh-pages
 
 cd -
