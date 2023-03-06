@@ -1,13 +1,14 @@
 import styled from "styled-components";
 
-const MainContainer = styled.div`
+const MainContainer = styled.article`
   display: flex;
+  justify-content: center;
   position: relative;
   max-width: 1280px;
 
   @media only screen and (min-width: 1280px) {
     flex-direction: row-reverse;
-    justify-content: space-between;
+    gap: 2em;
     margin: 0 auto;
   }
 
