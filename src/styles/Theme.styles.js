@@ -6,5 +6,6 @@ export const defaultTheme = {
         main: "#CB1531",
         accent: "#280004",
         highlight: "#EE596F",
+        green: "#6DCC1F"
     }
 }

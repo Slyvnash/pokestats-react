@@ -1,22 +1,22 @@
 import styled from "styled-components";
 
-const CardContainer = styled.div`
+const CardContainer = styled.section`
   display: flex;
-  position: relative;
   align-items: center;
-  height: 50%;
   width: 100%;
-  gap: 8px;
+  gap: 0.5em;
   text-align: center;
   font-size: 1.1rem;
   text-transform: capitalize;
   font-weight: 900;
-  padding: 8px 0;
 
-  @media only screen and (min-width: 640px) and (orientation: landscape) {
+  @media only screen and (min-width: 480px) {
+    font-size: 1.25rem;
+  }
+
+  @media only screen and (min-width: 768px) {
     flex-direction: column;
-    justify-content: space-between;
-    height: 100%; 
+    gap: 1em;
   }
 `;
 
@@ -26,24 +26,24 @@ const Column = styled.div`
   align-items: center;
   width: 50%;
 
-  @media only screen and (min-width: 640px) and (orientation: landscape) {
-    width: 75%
+  @media only screen and (min-width: 768px) {
+    width: 80%;
   }
 `;
 
 const CardImage = styled.img`
   width: 75%;
   max-width: 200px;
-
-  @media only screen and (min-width: 640px) and (orientation: landscape) {
-    width: 100%;
-  }
 `;
 
 const Detail = styled.p`
   font-size: 0.75rem;
   font-weight: 400;
   margin: 2px 0;
+
+  @media only screen and (min-width: 480px) {
+    font-size: 0.9rem;
+  }
 `;
 
 const Ability = styled.span`
@@ -81,43 +81,40 @@ const AbilityDescriptionContainer = styled.span`
 const StatsContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 0.75em;
   height: 100%;
   width: 100%;
 `;
 
 const OuterStatBar = styled.div`
   position: relative;
-  height: 24px;
+  height: 1.5rem;
   width: 100%;
-  border: 2px solid ${({ theme }) => theme.colors.main};
+  border: 2px solid ${({ theme }) => theme.colors.accent};
   border-radius: 4px;
 
-  @media only screen and (min-width: 640px) and (orientation: landscape) {
-    height: 32px;
+  @media only screen and (min-width: 480px) {
+    height: 2rem;
   }
 `;
 
 const InnerStatBar = styled.div`
   height: 100%;
   width: ${(props) => props.width}%;
-  background-color: ${({ theme }) => theme.colors.highlight};
-  opacity: 50%;
+  background-color: ${({ theme }) => theme.colors.green};
+  opacity: 0.45;
 `;
+
 const StatOverlay = styled.div`
   position: absolute;
-  top: 2px;
+  top: 50%;
+  transform: translate(0, -50%);
   left: 4px;
-  width: 100%;
-
-  @media only screen and (min-width: 640px) and (orientation: landscape) {
-    top: 4px;
-  }
+  width: 95%;
 `;
 
 const StatText = styled.p`
   display: flex;
-  width: 100%;
   justify-content: space-between;
   text-align: left;
   font-size: 0.75rem;
@@ -125,7 +122,7 @@ const StatText = styled.p`
   letter-spacing: 1px;
   margin: 0;
 
-  @media only screen and (min-width: 640px) and (orientation: landscape) {
+  @media only screen and (min-width: 480px) {
     font-size: 0.9rem;
   }
 `;

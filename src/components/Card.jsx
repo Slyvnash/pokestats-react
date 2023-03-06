@@ -87,6 +87,7 @@ export default function Card(props) {
       <Column>
         <CardImage
           src={selection.sprites.other["official-artwork"].front_default}
+          alt={selection.name}
         />
         {selection.name}
         <Detail>{typeList.join(" / ")}</Detail>

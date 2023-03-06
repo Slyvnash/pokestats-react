@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useStore } from "../../store/store";
 import {
   TabsContainer,
   TabList,
@@ -7,17 +6,19 @@ import {
   TabBody,
 } from "../../styles/Tabs.styles";
 import Tab from "./Tab";
+import { menuAtom } from "../../atoms/menu-atom"
+import { useAtom } from "jotai"
 
 export default function TabsMenu() {
   const [activeTab, setActiveTab] = useState(1);
-  const store = useStore()
+  const [toggle] = useAtom(menuAtom)
 
   const handleTab = (value) => {
     setActiveTab(value);
   };
 
   return (
-    <TabsContainer>
+    <TabsContainer open={toggle}>
       <TabList>
         <TabListItem
           className={activeTab === 1 ? "active" : ""}

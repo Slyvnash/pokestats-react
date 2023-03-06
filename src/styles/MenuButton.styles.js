@@ -9,7 +9,7 @@ const MenuButtonSVG = styled.svg`
   }
 
   @media only screen and (min-width: 1280px) {
-    visibility: hidden;
+    display: none;
   }
 `;
 

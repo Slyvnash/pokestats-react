@@ -70,7 +70,7 @@ border-radius: 4px;
 const InnerLoadingBar = styled.div`
     height: 100%;
     width: ${(props) => props.length};
-    background-color: ${({ theme }) => theme.colors.highlight};
+    background-color: ${({ theme }) => theme.colors.green};
     z-index: -2;
 `
 

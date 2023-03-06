@@ -3,35 +3,44 @@ import styled from "styled-components";
 const FormContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 0.25em;
   font-size: 1rem;
   font-weight: 900;
+
+  p {
+    margin: 0;
+  }
+
+  .activeVal {
+    color: ${({ theme }) => theme.colors.main};
+    text-transform: capitalize;
+  }
 `
 
 const SearchBox = styled.input`
   width: 100%;
-  padding: 4px;
+  padding: 0.25em;
   font-size: 1.1rem;
   border: 1px solid ${(props) => props.theme.colors.accent};
   border-radius: 4px;
-  margin-bottom: 8px;
+  margin-bottom: 0.5em;
 `
 
 const ButtonContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 8px;
+  margin-bottom: 0.5em;
 `
 
 const TypeButton = styled.button`
-  height: 32px;
-  width: 32px;
+  height: 2rem;
+  width: 2rem;
   color: ${(props) => props.theme.colors.white};
   font-weight: 700;
   background-color: ${(props) => props.disabled ? props.theme.colors.accent : props.theme.colors.main};
   border: none;
   border-radius: 4px;
-  margin: 2px;
+  margin: 0.125em;
   cursor: pointer;
 
   &:hover {
@@ -47,8 +56,9 @@ const TypeImg = styled.img`
 
 const SelectBox = styled.div`
     width: 100%;
-    height: 128px;
+    height: 25%;
     overflow-x: scroll;
+    scroll-snap-type: x mandatory;
     overflow-y: hidden;
     display: flex;
     gap: 1rem;
@@ -57,9 +67,10 @@ const SelectBox = styled.div`
 
 const SelectOption = styled.div`
     display: flex;
+    scroll-snap-align: start;
     flex: 0 0 auto;
     flex-direction: column;
-    width: 128px;
+    width: 48%;
     align-items: center;
     font-family: "Nunito", sans-serif;
     font-weight: 900;

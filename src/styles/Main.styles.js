@@ -1,40 +1,42 @@
 import styled from "styled-components";
 
 const MainContainer = styled.div`
-display: flex;
+  display: flex;
   position: relative;
-  width: 100%;
-  height: calc(100vh - 96px);
-  min-height: 570px;
-  max-height: 656px;
+  max-width: 1280px;
 
   @media only screen and (min-width: 1280px) {
-    justify-content: center;
     flex-direction: row-reverse;
-    gap: 24px;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+  @media only screen and (max-width: 1279px) and (orientation: landscape) {
+    flex-direction: row-reverse;
   }
 `;
 
-const DisplayContainer = styled.div`
+const DisplayContainer = styled.article`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 24px;
-  width: 90%;
-  max-width: 767px;
-  margin: 0 auto;
-  height: 100%;
+  padding: 1.25em;
+  gap: 1.25em;
+  width: 100%;
+  min-width: 327px;
+  max-width: 868px;
   color: ${({ theme }) => theme.colors.accent};
   background-color: ${({ theme }) => theme.colors.white};
   border-radius: 8px;
 
-  @media only screen and (min-width: 640px) and (orientation: landscape) {
-    flex-direction: row;
+  @media only screen and (max-width: 1279px) {
+    margin: 0 auto;
   }
 
-  @media only screen and (min-width: 1280px) {
-    margin: 0;
+  @media only screen and (min-width: 768px) {
+    flex-direction: row;
+    padding: 2em;
   }
 `;
 
@@ -42,9 +44,9 @@ const HRule = styled.hr`
   width: 90%;
   border-top: 2px solid ${({ theme }) => theme.colors.main};
   border-radius: 2px;
-  margin: 0 auto;
+  margin: 0;
 
-  @media only screen and (min-width: 640px) and (orientation: landscape) {
+  @media only screen and (min-width: 768px){
     display: none;
   }
 `;

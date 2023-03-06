@@ -33,6 +33,7 @@ export default function Form(props) {
           updateFilter(props.id, dataType, obj.name)
           runFilter(props.id)
         }}
+        aria-label={obj.name}
       >
         {dataType === "type" ? <TypeImg src={obj.value} /> : `${obj.value}`}
       </TypeButton>
@@ -46,7 +47,7 @@ export default function Form(props) {
       key={item.id}
       onClick={() => selectPokemon(props.id, item.id)}
     >
-      <OptionImage src={item.sprites.other["official-artwork"].front_default} />
+      <OptionImage src={item.sprites.other["official-artwork"].front_default} alt={item.name} />
       {item.name}
     </SelectOption>
   ));
@@ -64,7 +65,7 @@ export default function Form(props) {
           runFilter(props.id);
         }}
       />
-      Type:
+      <p>Type: <span className="activeVal">{typeVal}</span></p>
       <ButtonContainer>
         <TypeButton
           key={"all"}
@@ -73,12 +74,13 @@ export default function Form(props) {
             updateFilter(props.id, "type", "all");
             runFilter(props.id);
           }}
+          aria-label="all"
         >
           <TypeImg src={"./all.svg"} />
         </TypeButton>
         {buildButtons(typeData, typeVal, "type")}
       </ButtonContainer>
-      Generation:
+      <p>Generation: <span className="activeVal">{generationVal}</span></p>
       <ButtonContainer>
         <TypeButton
           key={"all"}
