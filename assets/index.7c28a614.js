@@ -114,14 +114,15 @@ Error generating stack: `+i.message+`
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
- */var S0=re.exports,k0=Symbol.for("react.element"),x0=Symbol.for("react.fragment"),E0=Object.prototype.hasOwnProperty,C0=S0.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner,_0={key:!0,ref:!0,__self:!0,__source:!0};function Id(e,t,n){var r,o={},i=null,l=null;n!==void 0&&(i=""+n),t.key!==void 0&&(i=""+t.key),t.ref!==void 0&&(l=t.ref);for(r in t)E0.call(t,r)&&!_0.hasOwnProperty(r)&&(o[r]=t[r]);if(e&&e.defaultProps)for(r in t=e.defaultProps,t)o[r]===void 0&&(o[r]=t[r]);return{$$typeof:k0,type:e,key:i,ref:l,props:o,_owner:C0.current}}ji.Fragment=x0;ji.jsx=Id;ji.jsxs=Id;(function(e){e.exports=ji})(Ns);const I=Ns.exports.jsx,ee=Ns.exports.jsxs;function P0(){const[e,t]=As(zs);return ee(u0,{xmlns:"http://www.w3.org/2000/svg",className:"icon icon-tabler icon-tabler-menu-2",width:"44",height:"44",viewBox:"0 0 24 24","stroke-width":"1.5",fill:"none","stroke-linecap":"round","stroke-linejoin":"round",onClick:()=>{t(!e)},children:[I("path",{stroke:"none",d:"M0 0h24v24H0z",fill:"none"}),I("line",{x1:"4",y1:"6",x2:"20",y2:"6"}),I("line",{x1:"4",y1:"12",x2:"20",y2:"12"}),I("line",{x1:"4",y1:"18",x2:"20",y2:"18"})]})}function $0(){return ee(o0,{children:[ee(i0,{children:[I(l0,{src:"./logo_white.svg",alt:"Pokestats Logo"}),"Pok\xE9stats",I("span",{className:"small",children:".info"})]}),I(P0,{})]})}const ba=B.div`
+ */var S0=re.exports,k0=Symbol.for("react.element"),x0=Symbol.for("react.fragment"),E0=Object.prototype.hasOwnProperty,C0=S0.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner,_0={key:!0,ref:!0,__self:!0,__source:!0};function Id(e,t,n){var r,o={},i=null,l=null;n!==void 0&&(i=""+n),t.key!==void 0&&(i=""+t.key),t.ref!==void 0&&(l=t.ref);for(r in t)E0.call(t,r)&&!_0.hasOwnProperty(r)&&(o[r]=t[r]);if(e&&e.defaultProps)for(r in t=e.defaultProps,t)o[r]===void 0&&(o[r]=t[r]);return{$$typeof:k0,type:e,key:i,ref:l,props:o,_owner:C0.current}}ji.Fragment=x0;ji.jsx=Id;ji.jsxs=Id;(function(e){e.exports=ji})(Ns);const I=Ns.exports.jsx,ee=Ns.exports.jsxs;function P0(){const[e,t]=As(zs);return ee(u0,{xmlns:"http://www.w3.org/2000/svg",className:"icon icon-tabler icon-tabler-menu-2",width:"44",height:"44",viewBox:"0 0 24 24","stroke-width":"1.5",fill:"none","stroke-linecap":"round","stroke-linejoin":"round",onClick:()=>{t(!e)},children:[I("path",{stroke:"none",d:"M0 0h24v24H0z",fill:"none"}),I("line",{x1:"4",y1:"6",x2:"20",y2:"6"}),I("line",{x1:"4",y1:"12",x2:"20",y2:"12"}),I("line",{x1:"4",y1:"18",x2:"20",y2:"18"})]})}function $0(){return ee(o0,{children:[ee(i0,{children:[I(l0,{src:"./logo_white.svg",alt:"Pokestats Logo"}),"Pok\xE9stats",I("span",{className:"small",children:".info"})]}),I(P0,{})]})}const ba=B.article`
   display: flex;
+  justify-content: center;
   position: relative;
   max-width: 1280px;
 
   @media only screen and (min-width: 1280px) {
     flex-direction: row-reverse;
-    justify-content: space-between;
+    gap: 2em;
     margin: 0 auto;
   }
 
