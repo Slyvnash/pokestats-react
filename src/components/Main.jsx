@@ -4,6 +4,7 @@ import Card from "./Card";
 import { useStore } from "../store/store";
 import Loader from "./Loader";
 
+//Main component, determines whether to display loading page or app
 export default function Main() {
   const isLoading = useStore((state) => state.isLoading);
 

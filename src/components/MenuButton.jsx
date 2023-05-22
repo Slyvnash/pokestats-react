@@ -2,6 +2,7 @@ import { MenuButtonSVG } from "../styles/MenuButton.styles";
 import { useAtom } from "jotai";
 import { menuAtom } from "../atoms/menu-atom";
 
+//Menu button for mobile view
 export default function MenuButton() {
   const [toggle, setToggle] = useAtom(menuAtom);
 
