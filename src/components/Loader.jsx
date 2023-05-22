@@ -14,7 +14,8 @@ import {
 
 export default function Loader() {
 const numberLoaded = useStore((state) => state.numberLoaded)
-
+const totalPokemon = 1010
+  
   return (
     <LoaderContainer>
       <IconContainer>
@@ -29,9 +30,9 @@ const numberLoaded = useStore((state) => state.numberLoaded)
         <CenterCircle />
           </IconContainer>
           <OuterLoadingBar>
-              <InnerLoadingBar length={`${Math.floor(numberLoaded / 1810 * 100)}%`} />
+              <InnerLoadingBar length={`${Math.floor(numberLoaded / (totalPokemon * 2) * 100)}%`} />
               <LoadingValue>
-              Loading: {Math.floor(numberLoaded / 1810 * 100) + "%"}
+              Loading: {Math.floor(numberLoaded / (totalPokemon * 2) * 100) + "%"}
               </LoadingValue>
           </OuterLoadingBar>
     </LoaderContainer>

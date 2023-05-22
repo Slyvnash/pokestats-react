@@ -7,6 +7,7 @@ const generationData = [
   { name: "6", value: "6" },
   { name: "7", value: "7" },
   { name: "8", value: "8" },
+  { name: "9", value: "9"},
 ];
 
 const typeData = [

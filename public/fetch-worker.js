@@ -15,7 +15,7 @@ onmessage = event => {
   if (!event.data.start) return;
   
   const API = 'https://pokeapi.co/api/v2/';
-  const TOTAL_POKEMON_COUNT = 905;
+  const TOTAL_POKEMON_COUNT = 1010;
 
   const calls = [];
 
